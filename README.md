@@ -18,4 +18,18 @@
   git clone ...
   ```
 
-* #### Install PostgreSQL
+* #### Set PostgreSQL 
+  Installation
+  ```
+  sudo apt install postgresql postgresql-contrib
+  ```
+  
+  Create role
+  ```
+  sudo -u postgres psql
+  CREATE DATABASE yourdbname;
+  CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
+  GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
+  ```
+  
+
