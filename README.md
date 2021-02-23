@@ -18,4 +18,4 @@ source my_env/bin/activate
 git clone ...
 ```
 
-### 4. Install PostgreSQL
+### 5. Install PostgreSQL
