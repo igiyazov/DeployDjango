@@ -1,8 +1,7 @@
 # DeployDjango
 
 
-
-* #### Install libs
+ ### Install libs
 
 
   ```
@@ -12,21 +11,30 @@
   ```
   sudo apt-get install -y git libpq-dev
   ```
-* #### Create and activate virtual enviroment
+### Create and activate virtual enviroment
   ```
   python3 -m venv my_env
   source my_env/bin/activate
   ```
 
-* ####  Clone repository from github.com
+###  Clone repository from github.com
   ```
   git clone ...
   ```
 
-* #### Set PostgreSQL 
+### Set PostgreSQL 
   Installation
   ```
   sudo apt install postgresql postgresql-contrib
+  postgres service start
+  sudo -u postgres psql
+  ```
+  Set postgres for Django
+  ```
+  ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+  ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+  ALTER ROLE myprojectuser SET timezone TO 'UTC';
+
   ```
   
   Create role
@@ -37,4 +45,7 @@
   GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
   ```
 
+
+Some guides:
+[https://habr.com/ru/post/501414/]
 
