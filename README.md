@@ -6,9 +6,12 @@
 
 
   ```
-  sudo apt-get install -y python3-pip python3-vevn build-essential libssl-dev libffi-dev python3-dev git
+  sudo apt-get install -y python3-pip python3-vevn build-essential libssl-dev libffi-dev python3-dev python3-wheel
   ```
-
+  ***Additional libs
+  ```
+  sudo apt-get install -y git libpq-dev
+  ```
 * #### Create and activate virtual enviroment
   ```
   python3 -m venv my_env
