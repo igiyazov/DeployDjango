@@ -47,6 +47,6 @@
 
 
 Some guides:
-*** [https://habr.com/ru/post/501414/] - deploy django
-*** [https://coderwall.com/p/acsbpw/heroku-export-postgres-database] - export/import postgres db
+* [https://habr.com/ru/post/501414/] - deploy django
+* [https://coderwall.com/p/acsbpw/heroku-export-postgres-database] - export/import postgres db
 
