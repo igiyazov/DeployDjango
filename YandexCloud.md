@@ -130,7 +130,9 @@ class MediaStorage(S3Boto3Storage):
 ```
 
 Таким образом у нас построится следующий путь к классу ```MediaStorage```:
+  
 ```myproject.storage_backends.MediaStorage```
+  
 Этот путь мы указали в ```DEFAULT_FILE_STORAGE```.
 
 
