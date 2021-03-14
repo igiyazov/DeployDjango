@@ -47,6 +47,7 @@
 
 
 Some guides:
-* [https://habr.com/ru/post/501414/] - deploy django
-* [https://coderwall.com/p/acsbpw/heroku-export-postgres-database] - export/import postgres db
+* [deploy django](https://habr.com/ru/post/501414/)
+* [deploy django digitaloceon](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04-ru)
+* [export/import postgres db](https://coderwall.com/p/acsbpw/heroku-export-postgres-database)
 
