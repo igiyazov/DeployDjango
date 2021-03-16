@@ -45,7 +45,7 @@
   GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
   ```
   
-  ### Configure PostgreSQL to allow remote connection
+  #### Configure PostgreSQL to allow remote connection
   
   By default PostgreSQL is configured to be bound to "localhost".
   To view all open ports we should execute ```ss -nlt``` on command line.
@@ -80,6 +80,21 @@
   ```
  
 
+#### Configuring pg_hba.conf
+Find and open _pg_hba.conf_ file:
+```
+sudo find / -name "pg_hba.conf"|sudo xargs -o vim
+```
+Add following entry at the very end
+```
+host    all             all              0.0.0.0/0                       md5
+host    all             all              ::/0                            md5
+```
+
+Restart postgresql server
+  ```
+  sudo service postgresql restart
+  ```
 
 Some guides:
 * [deploy django](https://habr.com/ru/post/501414/)
