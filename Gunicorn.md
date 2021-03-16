@@ -104,3 +104,8 @@ sudo systemctl restart gunicorn
 
 To view all open ports
 ```ss -lntu```
+  
+  
+## Useful links
+- [Set Up Django with Postgres, Nginx, and Gunicorn manual by Digitalocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04)
+- [Gunicorn config file settings](https://docs.gunicorn.org/en/stable/settings.html#config-file)
