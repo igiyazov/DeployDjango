@@ -44,6 +44,41 @@
   CREATE USER youruser WITH ENCRYPTED PASSWORD 'yourpass';
   GRANT ALL PRIVILEGES ON DATABASE yourdbname TO youruser;
   ```
+  
+  ### Configure PostgreSQL to allow remote connection
+  
+  By default PostgreSQL is configured to be bound to "localhost".
+  To view all open ports we should execute ```ss -nlt``` on command line.
+  We recieve an output like this:
+  ```
+  Proto Recv-Q Send-Q Local Address           Foreign Address         State
+  tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN
+  tcp        0      0 127.0.0.1:11211         0.0.0.0:*               LISTEN
+  tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN
+  tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
+  tcp        0      0 127.0.0.1:5432          0.0.0.0:*               LISTEN
+  tcp        0      0 127.0.0.1:3737          0.0.0.0:*               LISTEN
+  ```
+  As we can see above port 5432 is bound to 127.0.0.1. It means any attempt to connect to the postgresql server from outside the machine will be refused.
+  In order to fix this issue we need to find ```postgresql.conf```. 
+  ```
+  sudo find / -name "postgresql.conf" | head -1 |sudo xargs -o vim
+  ```
+    
+  Replace line
+  ```
+  listen_addresses = 'localhost'
+  ```
+  with
+  ```
+  listen_addresses = '*'
+  ```
+    
+  Now restart postgresql server.
+  ```
+  sudo service postgresql restart
+  ```
+ 
 
 
 Some guides:
