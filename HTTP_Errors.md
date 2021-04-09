@@ -21,3 +21,4 @@ You need just add ```cache: no-cache``` header in your request.
                 myImage.src = objectURL;
             });
 ```
+[Answer1](https://stackoverflow.com/questions/55158189/cross-origin-requests-ajax-requests-to-aws-s3-sometimes-result-in-cors-error), [answer2](https://stackoverflow.com/questions/12498704/cached-non-cors-response-conflicts-with-new-cors-request) from stackoverflow
