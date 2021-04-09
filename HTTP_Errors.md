@@ -1,5 +1,5 @@
 # Errors with http
--1
+  
 ## Cors errors when you send get request to S3
 You need just add ```cache: no-cache``` header in your request.
 ```javascript
