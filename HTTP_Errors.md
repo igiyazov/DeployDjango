@@ -1,6 +1,6 @@
 # Errors with http
   
-## Cors errors when you send get request to S3
+### Cors errors when you send get request to S3
 You need just add ```cache: no-cache``` header in your request.
 ```javascript
         var myImage = document.querySelector('img');
