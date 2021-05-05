@@ -5,9 +5,9 @@
 
 
   ```
-  sudo apt-get install -y python3-pip python3-vevn build-essential libssl-dev libffi-dev python3-dev python3-wheel
+  sudo apt-get install -y python3-pip python3-venv build-essential libssl-dev libffi-dev python3-dev python3-wheel
   ```
-  ***Additional libs
+  *** Additional libs
   ```
   sudo apt-get install -y git libpq-dev
   ```
